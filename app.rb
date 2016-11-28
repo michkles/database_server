@@ -1,6 +1,8 @@
 require 'sinatra/base'
 
 class Dataserver < Sinatra::Base
+  set :port, 4000
+
   get '/' do
     'Hello Dataserver!'
   end
