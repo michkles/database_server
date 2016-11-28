@@ -5,4 +5,9 @@ feature 'database server' do
     visit 'http://localhost:4000'
     expect(page.status_code).to eq 200
   end
+
+  scenario 'it should store the passed key and value in memory' do
+    visit 'http://localhost:4000/set?name=garfied'
+    visit 'http://localhost:4000/get?key=name'
+  end
 end
